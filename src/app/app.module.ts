@@ -9,12 +9,16 @@ import {AppRoutingModule} from "./app.routing.module";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {LayoutModule} from "./core/layout/layout.module";
 import { SearchComponent } from './search/search.component';
+import { CardComponent } from './components/card/card.component';
+import { DashboardService } from './core/services/dashboard.service';
+import { WeatherService } from './core/services/weather.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SearchComponent
+    SearchComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,11 @@ import { SearchComponent } from './search/search.component';
     LayoutModule,
     AppRoutingModule
   ],
-  providers: [SearchService],
+  providers: [
+    SearchService,
+    DashboardService,
+    WeatherService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
