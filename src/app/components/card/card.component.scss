@@ -1,0 +1,26 @@
+:host {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  display: block;
+  padding: 16px;
+  max-width: 400px;
+}
+
+.card-list {
+  list-style: none;
+
+  &__item {
+
+    hr {
+      border: 0;
+      border-top: 1px solid #319DB5; // $boston-blue // TODO: find a way to import colors from _variables
+    }
+
+    &:last-child {
+      hr {
+        display: none;
+      }
+    }
+  }
+}

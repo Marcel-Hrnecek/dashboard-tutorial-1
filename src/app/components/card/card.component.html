@@ -1,0 +1,10 @@
+<h2>
+  {{title}}
+</h2>
+<ol class="card-list">
+  <li class="card-list__item"
+      *ngFor="let listItem of content?.listItems">
+    {{listItem.text}}
+    <hr>
+  </li>
+</ol>
