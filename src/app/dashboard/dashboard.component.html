@@ -1,3 +1,20 @@
-<p>
-  Dashboard Komponente...
-</p>
+<ol class="dashboard-cards">
+  <li>
+    <app-card
+      [title]="'10 neuesten Fragen zum Thema \'Typescript\''"
+      [content]="dashboardService.typescriptSearchResult$ | async"
+    ></app-card>
+  </li>
+  <li>
+    <app-card
+      [title]="'10 neuesten Fragen zum Thema \'Angular2\''"
+      [content]="dashboardService.angular2SearchResult$ | async"
+    ></app-card>
+  </li>
+  <li>
+    <app-card
+      [title]="'5 neuesten Fragen + 5 Daten zum Thema \'Weather\''"
+      [content]="dashboardService.weatherSearchResult$ | async"
+    ></app-card>
+  </li>
+</ol>

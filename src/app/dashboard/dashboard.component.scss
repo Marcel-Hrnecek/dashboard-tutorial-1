@@ -1,0 +1,9 @@
+.dashboard-cards {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+
+  li {
+    margin: 0 16px 16px 0;
+  }
+}
