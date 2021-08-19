@@ -1,7 +1,11 @@
-<h2>
-  {{title}}
-</h2>
-<ol class="card-list">
+<div class="card-header"
+     (click)="toggleAccordion()">
+  <h2>
+    {{title}}
+  </h2>
+</div>
+<ol class="card-list"
+    [class.card-list--expanded]="isCardListExpanded">
   <li class="card-list__item"
       *ngFor="let listItem of content?.listItems">
     {{listItem.text}}

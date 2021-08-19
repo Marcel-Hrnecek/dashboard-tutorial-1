@@ -7,7 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
 
+  isCardListExpanded = false;
+
   @Input() title: string;
   @Input() content: CardContent;
 
+  toggleAccordion() {
+    this.isCardListExpanded = !this.isCardListExpanded;
+  }
 }

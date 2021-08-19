@@ -1,23 +1,47 @@
+@import "~assets/sass/modules/variables";
+
 :host {
   background: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   display: block;
-  padding: 16px;
   max-width: 400px;
+  overflow: hidden;
+}
+
+.card-header {
+  cursor: pointer;
+  padding: 1px $default-padding;
+
+  &:hover {
+    background: $blue-light;
+  }
 }
 
 .card-list {
   list-style: none;
+  padding: 0 $default-padding;
+  max-height: 0;
+  transition: max-height 500ms ease-in-out;
+
+  &--expanded {
+    max-height: 1000px;
+  }
 
   &__item {
 
     hr {
       border: 0;
-      border-top: 1px solid #319DB5; // $boston-blue // TODO: find a way to import colors from _variables
+      border-top: 1px solid $boston-blue;
+    }
+
+    &:first-child {
+      padding-top: $default-padding;
     }
 
     &:last-child {
+      padding-bottom: $default-padding;
+
       hr {
         display: none;
       }
